@@ -12,5 +12,22 @@
   },
   "devDependencies": {
     "nodemon": "^2.0.22"
-  }
+  },
+  "scripts": {
+    "start": "node server.js"
+  },
+  "name": "tech-blog",
+  "description": "N/A",
+  "version": "1.0.0",
+  "main": "server.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/stevemoore9595/Tech-Blog.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/stevemoore9595/Tech-Blog/issues"
+  },
+  "homepage": "https://github.com/stevemoore9595/Tech-Blog#readme"
 }

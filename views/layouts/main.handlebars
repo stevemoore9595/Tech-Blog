@@ -19,19 +19,23 @@
         <h1 class="logo"><span>Tech</span>Blog</h1>
         <ul class="nav-links">
             <li><a href="/">Home</a></li>
-            <li><a href="/dashboard">Dashboard</a> ||
-            {{#if loggedIn}}</li>
-            <li><a href="/fakeindex.html" id="login">Login</a> {{/if}}</li>
-            <li><a href="/logout" id="logout">Logout</a> {{else}}</li>
+            <li><a href="/dashboard">Dashboard</a></li> 
+            {{!-- {{#if loggedIn}} --}}
+            <li><a href="/login" id="login">Login</a></li>
+            {{!-- {{else}} --}}
+            <li><a href="/logout" id="logout">Logout</a></li>
+            {{!-- {{/if}} --}}
         </ul>
       </nav>
     <main class="col-auto">
         {{{ body }}}
     </main>
     
-    <footer class="flex-row justify-center"></footer>
+    {{!-- <footer class="flex-row justify-center"></footer> --}}
 </body>
 
 
   </body>
 </html>
+
+<script src="../../scripts/main.js"></script>

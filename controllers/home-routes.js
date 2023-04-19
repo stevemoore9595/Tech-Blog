@@ -6,7 +6,7 @@ router.get('/', async (req, res) => {
     try {
         const postData = await Post.findAll({
             include: [User],
-            order: [["date_created", 'DESC']]
+            order: [["createdAt", 'DESC']]
         });
         const posts = postData.map((post) => post.get({ plain: true }));
 
@@ -30,7 +30,7 @@ router.get('/post/:id', async (req, res) => {
             order: [
                 [
                     { model: Comment },
-                    "date_created",
+                    "createdAt",
                     'DESC'
                 ]
             ]
@@ -50,7 +50,7 @@ router.get('/post/:id', async (req, res) => {
 
 router.get('/login', (req, res) => {
     if (req.session.loggedIn) {
-        res.redirect('/');
+        res.redirect('/login');
         return;
     }
 
@@ -66,4 +66,4 @@ router.get('/signup', (req, res) => {
     res.render('signup');
 });
 
-nodule.exports = router;
+module.exports = router;

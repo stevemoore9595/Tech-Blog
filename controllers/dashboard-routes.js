@@ -7,7 +7,7 @@ router.get('/', withAuth, async (req, res) => {
     where: {
         userId: req.session.userId,
     },
-    order: [['date_created', 'DESC']]
+    order: [['createdAt', 'DESC']]
    });
 
 const posts = postData.map((post) => post.get({ plain: true }));
