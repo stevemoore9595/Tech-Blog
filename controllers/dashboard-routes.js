@@ -1,7 +1,6 @@
 const router = require('express').Router();
-const { findByPk } = require('./models/User');
 const { Post } = require('../models/');
-const withAuth = require('./utils/auth');
+const withAuth = require('../utils/auth');
 
 router.get('/', withAuth, async (req, res) => {
    const postData = await Post.findAll({
@@ -18,10 +17,8 @@ res.render('all-posts-admin', {
     posts,
 });
 
-} catch (err) {
-    res.redirect('login');
-}
 });
+
 
 router.get('/new', withAuth, (req, res) => {
     res.render('new-post', {
@@ -34,7 +31,7 @@ router.get('/edit/:id', withAuth, async (req, res) => {
         const postData = await Post.findByPk(req.params.id);
 
         if (postData) {
-            const post = postData.get({ plain, true });
+            const post = postData.get({ plain: true });
             req.render('edit-post', {
                 layout: 'dashboard',
                 post,

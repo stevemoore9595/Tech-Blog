@@ -1,4 +1,5 @@
 const router = require('express').Router();
+// const sequelize = require('./config/connection');
 const { Post, Comment, User } = require('../models/');
 
 router.get('/', async (req, res) => {
@@ -42,5 +43,27 @@ router.get('/post/:id', async (req, res) => {
         } else {
             res.status(404).end();
         }
+    } catch (err) {
+        res.status(500).json(err);
     }
-})
+});
+
+router.get('/login', (req, res) => {
+    if (req.session.loggedIn) {
+        res.redirect('/');
+        return;
+    }
+
+    res.render('signup');
+});
+
+router.get('/signup', (req, res) => {
+    if (req.session.loggedIn) {
+        res.redirect('/');
+        return;
+    }
+
+    res.render('signup');
+});
+
+nodule.exports = router;

@@ -18,8 +18,10 @@ const commentFormHandler = async function (event) {
          });
     if (response.ok) {
         document.location.reload();
-    } else {
-        document.location.assign("/login")
     }
-}
+    }
 };
+
+document
+    .querySelector('#new-comment-form')
+    .addEventListener('submit', commentFormHandler);

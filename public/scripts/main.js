@@ -1,5 +1,5 @@
-const session = require('express-session');
-const router = require('express').Router();
+// const session = require('express-session');
+// const router = require('express').Router();
 const loginBtn = document.getElementById('login');
 const logoutBtn = document.getElementById('logout');
 
