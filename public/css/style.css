@@ -49,7 +49,7 @@
     }
   
   a {
-      color: var(--logo-span-color)
+      color: var(--logo-span-color);
   }
     
   /* .nav-links :active {
@@ -98,7 +98,3 @@
     color: rgb(249, 226, 175);
   }; */
   
-  div.fP {
-  --bs-fP-link-color: black;
-  --bs-fP-link-hover-color: white;
-  };

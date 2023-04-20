@@ -54,7 +54,7 @@ router.get('/login', (req, res) => {
         return;
     }
 
-    res.render('signup');
+    res.render('login');
 });
 
 router.get('/signup', (req, res) => {

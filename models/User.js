@@ -9,9 +9,6 @@ User.init ({
         type: DataTypes.STRING,
         unique: true,
         allowNull: false,
-        validate: {
-            isAlphanumeric: true,
-        }
     },
     password: {
         type: DataTypes.STRING,
@@ -24,7 +21,7 @@ User.init ({
     hooks: {
         beforeCreate(newUser) {
             newUser.username = newUser.username.toLowerCase(),
-            newUser.password = bcrypt.hashSync(newUser.password, 5);
+            newUser.password = bcrypt.hashSync(newUser.password, 8);
             return newUser;
         }
     },
