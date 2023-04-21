@@ -5,7 +5,7 @@
 
 
 document.getElementById('login').onclick = function() {
-    window.location.href = '/api/user'; // Replace with your login page URL or route
+    window.location.href = '/api/user/login'; // Replace with your login page URL or route
   };
 
 
