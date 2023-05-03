@@ -1,3 +1,4 @@
+const express = require('express');
 const router = require('express').Router();
 // const sequelize = require('./config/connection');
 const { Post, Comment, User } = require('../models/');
@@ -8,7 +9,7 @@ router.get('/', async (req, res) => {
             include: [User],
             order: [["createdAt", 'DESC']]
         });
-        const posts = postData.map((post) => post.get({ plain: true }));
+        const posts = postData.map(post => post.get({ plain: true }));
 
         res.render('all-posts', { posts });
         console.log(posts)
@@ -19,7 +20,7 @@ router.get('/', async (req, res) => {
 
 router.get('/post/:id', async (req, res) => {
     try {
-        const postData = await Post.findByPk(req.params.id, {
+        const postData = await Post.findByPk(req.session.id, {
             include: [
                 User,
                 {
@@ -71,4 +72,4 @@ router.get("/logout",(req,res)=>{
     res.render("logout")
 });
 
-module.exports = router;
+module.exports = router

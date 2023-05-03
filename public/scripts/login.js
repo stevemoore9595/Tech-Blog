@@ -5,13 +5,11 @@ const loginFormHandler = async function (e) {
     const password = document.querySelector('input[name="password"]').value;
 
     if (username && password) {
-        console.log(username, password)
-        fetch("/api/user/login", {
+        // console.log(username, password)
+       fetch("/api/user/login", {
             method: "POST",
             body: JSON.stringify({username, password}),
-            headers: {
-                "Content-Type": "application/json"
-            }
+            headers: { "Content-Type": "application/json" }
         }).then(res => {
             if (res.ok) {
                 location.href = "/dashboard"

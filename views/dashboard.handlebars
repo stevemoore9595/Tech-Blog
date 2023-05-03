@@ -1,16 +1,17 @@
 <div id="userPost">
-    <h3>Welcome back, {{username}}!</h3>
+    <h3>Welcome back, {{user.username}}!</h3>
     <div class="row">
+        
         <div class="col">
-        {{#each Posts}}
+        {{#each posts}}
             <div class="card small">
                 <div class="card-content black-text">
                     <span class="card-title">{{title}}</span>
                     <p>{{description}}</p>
                 </div>
                 <div class="card-action" style="display: flex; justify-content:space-between">
-                    <button class="waves-effect waves-light btn editPost">Edit</button>
-                    <button class="waves-effect waves-light btn deletePost">Delete</button>                    
+                    <button data-id='{{id}}' class="waves-effect waves-light btn" id="editPost" name="edit">Edit</button>
+                    <button data-id='{{id}}' class="waves-effect waves-light btn" id="deletePost" name="delete">Delete</button>                    
                 </div>
             </div>
         {{/each}}
@@ -18,6 +19,6 @@
     </div>
 </div>
 
-<a href="/newpost" class="waves-effect waves-light btn" style="margin-top: 10px;">New Post</a>
+<a href="/dashboard/newpost" class="waves-effect waves-light btn" style="margin-top: 10px;">New Post</a>
 
-<script src="/scripts/new.js"></script>
+<script src="/scripts/dashboard.js"></script>

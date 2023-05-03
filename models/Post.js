@@ -11,12 +11,15 @@ Post.init ({
             max: 30,
         }  
     },
-    desciption: {
+    description: {
         type: DataTypes.TEXT,
         allowNull: false
-    }
-    }, {
-        sequelize
+    },
+    
+}, 
+    {
+        sequelize,
+        
 });
 
 module.exports = Post

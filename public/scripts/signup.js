@@ -36,7 +36,7 @@ const signUpFormHandler = async function (e) {
     const password = document.querySelector('input[name="password"]').value;
 
     if (username && password) {
-        fetch("/api/user/", {
+        fetch("/api/user", {
             method: "POST",
             body: JSON.stringify({username, password}),
             headers: {
@@ -45,9 +45,7 @@ const signUpFormHandler = async function (e) {
         }).then(res => {
             if (res.ok) {
                 location.href = "/dashboard"
-            } else {
-                alert("trumpet sound")
-            }
+            } 
         })
     }
 };
