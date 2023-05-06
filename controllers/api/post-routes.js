@@ -23,19 +23,19 @@ router.post("/", (req,res) => {
 
 router.put('/:id', withAuth, async (req, res) => {
     try {
-        const [affectedRows] = await Post.update(req.body, {
+        const affectedRows = await Post.update(req.body, {
             where: {
-                UserId: req.session.userId,
+                id: req.params.id,
             },
         });
 
-        if (affectedRows > 0) {
+        if (!affectedRows) {
             res.status(200).end();
         } else {
-            res.stastus(404).end();
+            res.status(404).end();
         }
     } catch (err) {
-        res.status(500).json(err);
+        res.status(500).json(err.message);
     }
 });
 

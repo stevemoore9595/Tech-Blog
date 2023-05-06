@@ -18,9 +18,12 @@ res.render('dashboard', {
 
 });
 
-
 router.get('/newpost', withAuth, (req, res) => {
     res.render('newpost')
+});
+
+router.get('/edit', withAuth, (req, res) => {
+    res.render('edit')
 });
 
 module.exports = router

@@ -2,7 +2,7 @@
 
 ## Description
 
-
+The Tech Blog app allows users to create a personal account and then start writing posts for their blog. On the homepage, many users can see all posts and can leave comments on them as well. The user must be logged in to edit or delete their posts. They aren't able to edit or delete other posts created by other users.
 
   ## Table of Contents
 
@@ -12,10 +12,6 @@
 
   Run npm i to install inquirer.js, mysql2
 
-  ## Usage
-
- 
-
   ## License
 
   MIT
@@ -23,10 +19,14 @@
   ## Contributing
 
   N/A
-
-  ## Walkthrough Video
   
-  Click the following link to access the walkthrough video: 
+  ## Screenshot
+
+  
+
+  ## Deployment Link
+  
+  Click the following link to access the Tech Blog: 
 
   ## Questions
 

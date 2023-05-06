@@ -1,4 +1,4 @@
-const newFormHandler = async function (e) {
+const editFormHandler = async function (e) {
     e.preventDefault();
 
     const title = document.querySelector('input[name="title"]').value;
@@ -6,7 +6,7 @@ const newFormHandler = async function (e) {
 
     if (title && description) {
         fetch ('/api/post', {
-            method: 'POST',
+            method: 'PUT',
             body: JSON.stringify({title, description}),
              headers: {
                 "Content-Type": "application/json"
@@ -20,5 +20,5 @@ const newFormHandler = async function (e) {
 };
 
 document
-    .querySelector('#newPostForm')
-    .addEventListener('click', newFormHandler);
+    .querySelector('#editPostForm')
+    .addEventListener('submit', editFormHandler);
