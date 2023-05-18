@@ -22,11 +22,13 @@ The Tech Blog app allows users to create a personal account and then start writi
   
   ## Screenshot
 
-  
+  ![image](https://github.com/stevemoore9595/React-Portfolio/assets/38742748/c5cfa1f6-b756-4b2d-82a3-9e8b4637faf2)
+
+  ![image](https://github.com/stevemoore9595/React-Portfolio/assets/38742748/87399dda-8e52-4667-8092-4208e13413ec)
 
   ## Deployment Link
   
-  Click the following link to access the Tech Blog: 
+  Click the following link to access the Tech Blog: https://dry-oasis-76544.herokuapp.com/
 
   ## Questions
 
